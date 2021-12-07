@@ -1,0 +1,4 @@
+# some specific dependency versions that still work with python2
+
+pyrsistent==0.16.1
+jsonschema==3.2.0
