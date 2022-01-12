@@ -62,7 +62,15 @@ setup(
     entry_points={
         'console_scripts': [
             'goodtables = goodtables.__main__:cli',
-        ]
+        ],
+        'babel.extractors': [
+            'goodtables = goodtables.extract:extract_errors',
+        ],
+    },
+    message_extractors={
+        'goodtables': [
+            ('spec.json', 'goodtables', None),
+        ],
     },
     zip_safe=False,
     long_description=README,

@@ -4,6 +4,13 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
+import gettext
+import os
+_ = gettext.translation(
+    'goodtables',
+    os.path.dirname(__file__) + '/i18n',
+    languages=['en', 'fr']
+).gettext
 import functools
 from .spec import spec
 
@@ -70,7 +77,7 @@ class Error(object):
     @property
     def message(self):
         if self._message:
-            return self._message.format(
+            return _(self._message).format(
                 row_number=self.row_number,
                 column_number=self.column_number,
                 **self._message_substitutions
