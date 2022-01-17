@@ -7,10 +7,10 @@ from __future__ import unicode_literals
 import gettext
 import os
 i18n_dir = os.path.join(os.path.dirname(__file__), 'i18n')
-_ = gettext.translation(
-    'goodtables',
-    i18n_dir,
-).ugettext
+try:
+    _ = gettext.translation('goodtables', i18n_dir).ugettext
+except IOError:
+    _ = lambda x:x
 
 import functools
 from .spec import spec
