@@ -6,11 +6,12 @@ from __future__ import unicode_literals
 
 import gettext
 import os
+i18n_dir = os.path.join(os.path.dirname(__file__), 'i18n')
 _ = gettext.translation(
     'goodtables',
-    os.path.dirname(__file__) + '/i18n',
-    languages=['en', 'fr']
-).gettext
+    i18n_dir,
+).ugettext
+
 import functools
 from .spec import spec
 
