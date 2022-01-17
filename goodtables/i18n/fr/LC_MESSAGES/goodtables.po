@@ -1,0 +1,759 @@
+# Translations template for goodtables.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the goodtables project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: goodtables 2.5.4\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-12-21 17:03-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#. errors.io-error.name
+#: goodtables/spec.json:7
+msgid "IO Error"
+msgstr "Erreur d'entrée ou de sortie"
+
+#. errors.io-error.message
+#: goodtables/spec.json:11
+msgid "The data source returned an IO Error of type {error_type}"
+msgstr "La source de données a généré une erreur d'entrée ou de sortie de type {error_type}"
+
+#. errors.io-error.description
+#: goodtables/spec.json:12
+msgid ""
+"Data reading error because of IO error.\n"
+"\n"
+" How it could be resolved:\n"
+" - Fix path if it's not correct."
+msgstr ""
+"Lecture des données erronée causée par l'erreur d'entrée ou de sortie.\n"
+"\n" 
+"Solution:\n" 
+"- Corriger le chemin d'accès."
+
+
+#. errors.http-error.name
+#: goodtables/spec.json:15
+msgid "HTTP Error"
+msgstr "Erreur HTTP"
+
+#. errors.http-error.message
+#: goodtables/spec.json:19
+msgid "The data source returned an HTTP error with a status code of {status_code}"
+msgstr "La source de données a généré une erreur HTTP avec le code d'état {status_code}"
+
+#. errors.http-error.description
+#: goodtables/spec.json:20
+msgid ""
+"Data reading error because of HTTP error.\n"
+"\n"
+" How it could be resolved:\n"
+" - Fix url link if it's not correct."
+msgstr ""
+"Lecture des données erronée causée par l'erreur HTTP.\n"
+"\n"
+"Solution :\n"
+"- Corriger le lien URL."
+
+#. errors.source-error.name
+#: goodtables/spec.json:23
+msgid "Source Error"
+msgstr "Erreur de la source"
+
+#. errors.source-error.message
+#: goodtables/spec.json:27
+msgid ""
+"The data source has not supported or has inconsistent contents; no "
+"tabular data can be extracted"
+msgstr ""
+"La source de données n'a pas pris en charge le contenu" 
+"ou celui-ci est incohérent; aucune donnée tabulaire ne peut être extraite" 
+
+#. errors.source-error.description
+#: goodtables/spec.json:28
+msgid ""
+"Data reading error because of not supported or inconsistent contents.\n"
+"\n"
+" How it could be resolved:\n"
+" - Fix data contents (e.g. change JSON data to array or arrays/objects).\n"
+" - Set correct source settings in {validator}."
+msgstr ""
+"Lecture des données erronée causée par le contenu qui n'est pas pris en charge ou incohérent.\n"
+"\n"
+"Solution :\n"
+"- Corriger le contenu des données (p. ex. modifier les données JSON en tableau ou en tableaux/objets).\n"
+"- Configurer correctement les paramètres de la source dans {validator}."
+
+#. errors.scheme-error.name
+#: goodtables/spec.json:31
+msgid "Scheme Error"
+msgstr "Erreur de schéma"
+
+#. errors.scheme-error.message
+#: goodtables/spec.json:35
+msgid "The data source is in an unknown scheme; no tabular data can be extracted"
+msgstr "Le schéma de la source de données est inconnu; aucune donnée tabulaire ne peut être extraite."
+
+#. errors.scheme-error.description
+#: goodtables/spec.json:36
+msgid ""
+"Data reading error because of incorrect scheme.\n"
+"\n"
+" How it could be resolved:\n"
+" - Fix data scheme (e.g. change scheme from `ftp` to `http`).\n"
+" - Set correct scheme in {validator}."
+msgstr ""
+"Lecture des données erronée causée par un schéma incorrect.\n"
+"\n"
+"Solution :\n"
+"- Corriger le schéma de données (p. ex. modifier le schéma de `ftp` à `http`).\n"
+"- Configurer correctement les schémas dans {validator}."
+
+#. errors.format-error.name
+#: goodtables/spec.json:39
+msgid "Format Error"
+msgstr "Erreur de format"
+
+#. errors.format-error.message
+#: goodtables/spec.json:43
+msgid "The data source is in an unknown format; no tabular data can be extracted"
+msgstr "Le format de la source de données est inconnu; aucune donnée tabulaire ne peut être extraite"
+
+#. errors.format-error.description
+#: goodtables/spec.json:44
+msgid ""
+"Data reading error because of incorrect format.\n"
+"\n"
+" How it could be resolved:\n"
+" - Fix data format (e.g. change file extension from `txt` to `csv`).\n"
+" - Set correct format in {validator}."
+msgstr ""
+"Lecture des données erronée causée par un format incorrect.\n"
+"\n" 
+"Solution :\n"
+"- Corriger le format des données (p. ex. modifier l'extension du fichier de `txt` à `csv`).\n"
+"- Configurer correctement le format dans {validator}."
+
+#. errors.encoding-error.name
+#: goodtables/spec.json:47
+msgid "Encoding Error"
+msgstr "Erreur d'encodage"
+
+#. errors.encoding-error.message
+#: goodtables/spec.json:51
+msgid "The data source could not be successfully decoded with {encoding} encoding"
+msgstr "La source des données n'a pas pu être décodée avec l'encodage {encoding}"
+
+#. errors.encoding-error.description
+#: goodtables/spec.json:52
+msgid ""
+"Data reading error because of an encoding problem.\n"
+"\n"
+" How it could be resolved:\n"
+" - Fix data source if it's broken.\n"
+" - Set correct encoding in {validator}."
+msgstr ""
+"Lecture des données erronée causée par un problème d'encodage.\n"
+"\n" 
+"Solution :\n"
+"- Corriger la source des données.\n"
+"- Configurer correctement l'encodage dans {validator}."
+ 
+#. errors.blank-header.name
+#: goodtables/spec.json:57
+msgid "Blank Header"
+msgstr "En-tête vide"
+
+#. errors.blank-header.message
+#: goodtables/spec.json:61
+msgid "Header in column {column_number} is blank"
+msgstr "L'en-tête de la colonne {column_number} est vide."
+
+#. errors.blank-header.description
+#: goodtables/spec.json:62
+msgid ""
+"A column in the header row is missing a value. Column names should be "
+"provided.\n"
+"\n"
+" How it could be resolved:\n"
+" - Add the missing column name to the first row of the data source.\n"
+" - If the first row starts with, or ends with a comma, remove it.\n"
+" - If this error should be ignored disable `blank-header` check in "
+"{validator}."
+msgstr ""
+"Il manque une valeur dans une colonne de la ligne d'en-tête. Les noms des colonnes doivent être fournis.\n"
+"\n" 
+"Solution :\n"
+"- Ajouter le nom manquant de la colonne dans la première ligne dans la source de données.\n"
+"- Si la ligne débute ou se termine par une virgule, elle doit être supprimée. \n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `blank-header` dans le {validator}."
+
+#. errors.duplicate-header.name
+#: goodtables/spec.json:65
+msgid "Duplicate Header"
+msgstr "En-tête en double"
+
+#. errors.duplicate-header.message
+#: goodtables/spec.json:69
+msgid ""
+"Header in column {column_number} is duplicated to header in column(s) "
+"{column_numbers}"
+msgstr ""
+"L'en-tête de la colonne {column_number} est dupliqué" 
+"dans l'en-tête de la colonne ou des colonnes {column_numbers}."
+
+#. errors.duplicate-header.description
+#: goodtables/spec.json:70
+msgid ""
+"Two columns in the header row have the same value. Column names should be"
+" unique.\n"
+"\n"
+" How it could be resolved:\n"
+" - Add the missing column name to the first row of the data.\n"
+" - If the first row starts with, or ends with a comma, remove it.\n"
+" - If this error should be ignored disable `duplicate-header` check in "
+"{validator}."
+msgstr ""
+"Deux colonnes de la ligne d'en-tête ont la même valeur. Le nom des colonnes doit être unique.\n"
+"\n"
+"Solution :\n"
+"- Ajouter le nom manquant de la colonne à la première ligne de données.\n" 
+"- Si la ligne commence ou se termine par une virgule,  elle doit être supprimée.\n"
+"-Si l'erreur doit être ignorée, il faut désactiver la vérification `duplicate-header` dans le {validator}."
+
+#. errors.blank-row.name
+#: goodtables/spec.json:73
+msgid "Blank Row"
+msgstr "Ligne vide"
+
+#. errors.blank-row.message
+#: goodtables/spec.json:77
+msgid "Row {row_number} is completely blank"
+msgstr "La ligne {row_number} est complètement vide"
+
+#. errors.blank-row.description
+#: goodtables/spec.json:78
+msgid ""
+"This row is empty. A row should contain at least one value.\n"
+"\n"
+" How it could be resolved:\n"
+" - Delete the row.\n"
+" - If this error should be ignored disable `blank-row` check in "
+"{validator}."
+msgstr ""
+"La ligne est vide. Un ligne doit contenir au moins une valeur.\n"
+"\n" 
+"Solution :\n"
+"- Supprimer la ligne.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `duplicate-header` dans le {validator}."
+
+#. errors.duplicate-row.name
+#: goodtables/spec.json:81
+msgid "Duplicate Row"
+msgstr "Ligne en double"
+
+#. errors.duplicate-row.message
+#: goodtables/spec.json:85
+msgid "Row {row_number} is duplicated to row(s) {row_numbers}"
+msgstr "La ligne {row_number} est dupliqué dans la ligne ou les lignes {row_number}"
+
+#. errors.duplicate-row.description
+#: goodtables/spec.json:86
+msgid ""
+"The exact same data has been seen in another row.\n"
+"\n"
+" How it could be resolved:\n"
+" - If some of the data is incorrect, correct it.\n"
+" - If the whole row is an incorrect duplicate, remove it.\n"
+" - If this error should be ignored disable `duplicate-row` check in "
+"{validator}."
+msgstr ""
+"La même donnée se trouve dans une autre ligne.\n"
+"\n"
+"Solution :\n"
+"- Corriger la donnée si elle est incorrecte.\n"
+"- Si toute la ligne est un doublon erroné, elle doit être supprimée.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `duplicate-row` dans le {validator}."
+
+#. errors.extra-value.name
+#: goodtables/spec.json:89
+msgid "Extra Value"
+msgstr "Valeur supplémentaire"
+
+#. errors.extra-value.message
+#: goodtables/spec.json:93
+msgid "Row {row_number} has an extra value in column {column_number}"
+msgstr "La ligne {row_number} contient une valeur supplémentaire dans la colonne {column_number}"
+
+#. errors.extra-value.description
+#: goodtables/spec.json:94
+msgid ""
+"This row has more values compared to the header row (the first row in the"
+" data source). A key concept is that all the rows in tabular data must "
+"have the same number of columns.\n"
+"\n"
+" How it could be resolved:\n"
+" - Check data has an extra comma between the values in this row.\n"
+" - If this error should be ignored disable `extra-value` check in "
+"{validator}."
+msgstr ""
+"Cette ligne contient plus de valeurs que la ligne de l'en-tête (la première ligne dans la"
+"source des données). Toutes les lignes des données tabulaires doivent avoir le même nombre de colonnes.\n"
+"\n"
+"Solution :\n"
+"- Vérifier si les données ont une virgule supplémentaire entre les valeur dans cette ligne.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `extra-value` dans le {validator}."
+
+#. errors.missing-value.name
+#: goodtables/spec.json:97
+msgid "Missing Value"
+msgstr "Valeur manquante"
+
+#. errors.missing-value.message
+#: goodtables/spec.json:101
+msgid "Row {row_number} has a missing value in column {column_number}"
+msgstr "Il manque une valeur dans la ligne {row_number} de la colonne {column_number}"
+
+#. errors.missing-value.description
+#: goodtables/spec.json:102
+msgid ""
+"This row has less values compared to the header row (the first row in the"
+" data source). A key concept is that all the rows in tabular data must "
+"have the same number of columns.\n"
+"\n"
+" How it could be resolved:\n"
+" - Check data is not missing a comma between the values in this row.\n"
+" - If this error should be ignored disable `missing-value` check in "
+"{validator}."
+msgstr ""
+"Cette ligne contient moins de valeurs que la ligne de l'en-tête (la première ligne dans la"
+"source des données). Toutes les lignes des données tabulaires doivent avoir"
+"le même nombre de colonnes.\n"
+"\n"
+"Solution :\n"
+"- Vérifier si les données ont une virgule supplémentaire entre les valeur dans cette ligne." 
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `missing-value` dans le {validator}."
+
+#. errors.schema-error.name
+#: goodtables/spec.json:107
+msgid "Table Schema Error"
+msgstr "Erreur dans le schéma de données"
+
+#. errors.schema-error.message
+#: goodtables/spec.json:111
+msgid "Table Schema error: {error_message}"
+msgstr "Erreur dans le schéma de données: {error_message}"
+
+#. errors.schema-error.description
+#: goodtables/spec.json:112
+msgid ""
+"Provided schema is not valid.\n"
+"\n"
+" How it could be resolved:\n"
+" - Update schema descriptor to be a valid descriptor\n"
+" - If this error should be ignored disable schema checks in {validator}."
+msgstr ""
+"Le schéma fournit n'est pas valide.\n"
+"\n"
+"Solution :\n"
+"- Mettre à jour le descripteur du schéma pour qu'il soit valide.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver les vérifications de schéma dans le {validator}."
+
+#. errors.non-matching-header.name
+#: goodtables/spec.json:115
+msgid "Non-Matching Header"
+msgstr "En-tête non concordante"
+
+#. errors.non-matching-header.message
+#: goodtables/spec.json:119
+msgid ""
+"Header in column {column_number} doesn't match field name {field_name} in"
+" the schema"
+msgstr ""
+"L'en-tête de la colonne {column_number} ne correspond pas au nom du champ {field_name}" 
+" dans le schéma"
+
+#. errors.non-matching-header.description
+#: goodtables/spec.json:120
+msgid ""
+"One of the data source headers doesn't match the field name defined in "
+"the schema.\n"
+"\n"
+" How it could be resolved:\n"
+" - Rename header in the data source or field in the schema\n"
+" - If this error should be ignored disable `non-matching-header` check in"
+" {validator}."
+msgstr ""
+"L'une des en-têtes de la source de données ne correspond pas au nom du champ défini dans le schéma.\n"
+"\n"
+"Solution :\n"
+"- Renommer l'en-tête dans la source de données ou le champ dans le schéma.\n"
+"-  Si l'erreur doit être ignorée, il faut désactiver la vérification `non-matching-header`dans le {validator}."
+
+#. errors.extra-header.name
+#: goodtables/spec.json:123
+msgid "Extra Header"
+msgstr "En-tête supplémentaire"
+
+#. errors.extra-header.message
+#: goodtables/spec.json:127
+msgid "There is an extra header in column {column_number}"
+msgstr "La colonne {column_number} compte une en-tête supplémentaire."
+
+#. errors.extra-header.description
+#: goodtables/spec.json:128
+msgid ""
+"The first row of the data source contains header that doesn't exist in "
+"the schema.\n"
+"\n"
+" How it could be resolved:\n"
+" - Remove the extra column from the data source or add the missing field "
+"to the schema\n"
+" - If this error should be ignored disable `extra-header` check in "
+"{validator}."
+msgstr ""
+"D'après le schéma, il manquerait une en-tête dans la première ligne dans la source de données.\n"
+"\n"
+"Solution :\n"
+"- Ajouter la colonne manquante dans la source de données ou supprimer le champ " 
+"supplémentaire dans le schéma\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `missing-header` dans le {validator}."
+
+#. errors.missing-header.name
+#: goodtables/spec.json:131
+msgid "Missing Header"
+msgstr "En-tête manquante"
+
+#. errors.missing-header.message
+#: goodtables/spec.json:135
+msgid "There is a missing header in column {column_number}"
+msgstr "Il manque une en-tête dans la colonne {column_number}."
+
+#. errors.missing-header.description
+#: goodtables/spec.json:136
+msgid ""
+"Based on the schema there should be a header that is missing in the first"
+" row of the data source.\n"
+"\n"
+" How it could be resolved:\n"
+" - Add the missing column to the data source or remove the extra field "
+"from the schema\n"
+" - If this error should be ignored disable `missing-header` check in "
+"{validator}."
+msgstr ""
+
+#. errors.type-or-format-error.name
+#: goodtables/spec.json:139
+msgid "Type or Format Error"
+msgstr "Erreur de type ou de format"
+
+
+#. errors.type-or-format-error.message
+#: goodtables/spec.json:143
+msgid ""
+"The value {value} in row {row_number} and column {column_number} is not "
+"type {field_type} and format {field_format}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} "
+"ne correspond pas au type {field_type} et au format {field_format}"
+
+#. errors.type-or-format-error.description
+#: goodtables/spec.json:144
+msgid ""
+"The value does not match the schema type and format for this field.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If this value is correct, adjust the type and/or format.\n"
+" - To ignore the error, disable the `type-or-format-error` check in "
+"{validator}. In this case all schema checks for row values will be "
+"ignored."
+msgstr ""
+"La valeur ne correspond pas au type et au format du schéma pour ce champ.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, il faut modifier le type et/ou le format.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `type-or-format-error` dans"
+" le {validator}. Dans ce cas, toutes les vérifications du schéma pour les valeurs de la ligne seront ignorées."
+
+#. errors.required-constraint.name
+#: goodtables/spec.json:147
+msgid "Required Constraint"
+msgstr "Contrainte requise"
+
+#. errors.required-constraint.message
+#: goodtables/spec.json:151
+msgid ""
+"Column {column_number} is a required field, but row {row_number} has no "
+"value"
+msgstr ""
+"La colonne {column_number} est un champ obligatoire, mais la ligne {row_number} ne contient "
+"aucune valeur."
+
+#. errors.required-constraint.description
+#: goodtables/spec.json:152
+msgid ""
+"This field is a required field, but it contains no value.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove the `required` constraint from the "
+"schema.\n"
+" - If this error should be ignored disable `required-constraint` check in"
+" {validator}."
+msgstr ""
+"Ce champ est obligatoire, mais il ne contient aucune valeur.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, il faut supprimer la contrainte `required` du schéma.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `required-constraint` dans le {validator}."
+
+#. errors.pattern-constraint.name
+#: goodtables/spec.json:155
+msgid "Pattern Constraint"
+msgstr "Contrainte de forme"
+
+#. errors.pattern-constraint.message
+#: goodtables/spec.json:159
+msgid ""
+"The value {value} in row {row_number} and column {column_number} does not"
+" conform to the pattern constraint of {constraint}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} ne"
+" correspond pas à la contrainte de forme de {constraint}"
+
+#. errors.pattern-constraint.description
+#: goodtables/spec.json:160
+msgid ""
+"This field value should conform to constraint pattern.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove or refine the `pattern` constraint in"
+" the schema.\n"
+" - If this error should be ignored disable `pattern-constraint` check in "
+"{validator}."
+msgstr ""
+"La valeur de ce champ devrait correspondre à la contrainte de forme.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, il faut supprimer ou affiner la contrainte `pattern` dans le schéma.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `pattern-constraint` dans le {validator}."
+
+#. errors.unique-constraint.name
+#: goodtables/spec.json:163
+msgid "Unique Constraint"
+msgstr "Contrainte unique"
+
+#. errors.unique-constraint.message
+#: goodtables/spec.json:167
+msgid ""
+"Rows {row_numbers} has unique constraint violation in column "
+"{column_number}"
+msgstr ""
+"Les lignes {row_numbers} présente une violation de contrainte unique "
+"dans la colonne {column_number}."
+
+#. errors.unique-constraint.description
+#: goodtables/spec.json:168
+msgid ""
+"This field is a unique field but it contains a value that has been used "
+"in another row.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then the values in this column are not unique. "
+"Remove the `unique` constraint from the schema.\n"
+" - If this error should be ignored disable `unique-constraint` check in "
+"{validator}."
+msgstr ""
+"Ce champ est un champ unique, mais il contient une valeur qui a été utilisée dans une autre ligne.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, alors les valeurs dans cette colonne ne sont pas uniques. "
+"Il faut supprimer la contrainte `unique` dans le schéma.\n"
+"- Si l'erreur doit être ignorée, il faut désactiver la vérification `unique-constraint` "
+"dans le {validator}."
+
+#. errors.enumerable-constraint.name
+#: goodtables/spec.json:171
+msgid "Enumerable Constraint"
+msgstr "Contrainte d'énumération"
+
+#. errors.enumerable-constraint.message
+#: goodtables/spec.json:175
+msgid ""
+"The value {value} in row {row_number} and column {column_number} does not"
+" conform to the given enumeration: {constraint}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} ne correspond pas"
+" à l'énumération donnée : {constraint}."
+
+#. errors.enumerable-constraint.description
+#: goodtables/spec.json:176
+msgid ""
+"This field value should be equal to one of the values in the enumeration "
+"constraint.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove or refine the `enum` constraint in "
+"the schema.\n"
+" - If this error should be ignored disable `enumerable-constraint` check "
+"in {validator}."
+msgstr ""
+"La valeur de ce champ devrait correspondre à l'une des valeurs dans la contrainte d'énumération.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, il faut supprimer ou affiner la contrainte `enum` dans le schéma.\n"
+"- Si l'erreur doit être ignoré, il faut désactiver la vérification `enumerable-constraint` dans le {validator}."
+
+#. errors.minimum-constraint.name
+#: goodtables/spec.json:179
+msgid "Minimum Constraint"
+msgstr "Contrainte minimale"
+
+#. errors.minimum-constraint.message
+#: goodtables/spec.json:183
+msgid ""
+"The value {value} in row {row_number} and column {column_number} does not"
+" conform to the minimum constraint of {constraint}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} ne correspond pas "
+"à la contrainte minimale de {constraint}."
+
+#. errors.minimum-constraint.description
+#: goodtables/spec.json:184
+msgid ""
+"This field value should be greater or equal than constraint value.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove or refine the `minimum` constraint in"
+" the schema.\n"
+" - If this error should be ignored disable `minimum-constraint` check in "
+"{validator}."
+msgstr ""
+"La valeur de ce champ devrait être supérieure ou égale à la valeur de la contrainte.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, il faut supprimer ou affiner la contrainte `minimum` dans le schéma.\n"
+"- Si l'erreur doit être ignoré, il faut désactiver la vérification `minimum-constraint` dans le {validator}."
+
+#. errors.maximum-constraint.name
+#: goodtables/spec.json:187
+msgid "Maximum Constraint"
+msgstr "Contrainte maximale"
+
+#. errors.maximum-constraint.message
+#: goodtables/spec.json:191
+msgid ""
+"The value {value} in row {row_number} and column {column_number} does not"
+" conform to the maximum constraint of {constraint}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} ne correspond pas"
+" à la contrainte maximale de {constraint}."
+
+#. errors.maximum-constraint.description
+#: goodtables/spec.json:192
+msgid ""
+"This field value should be less or equal than constraint value.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove or refine the `maximum` constraint in"
+" the schema.\n"
+" - If this error should be ignored disable `maximum-constraint` check in "
+"{validator}."
+msgstr ""
+"La valeur de ce champ devrait être inférieure ou égale à la valeur de la contrainte.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n"
+"- Si la valeur est exacte, il faut supprimer ou affiner la contrainte `maximum` dans le schéma.\n"
+"- Si l'erreur doit être ignoré, il faut désactiver la vérification `maximum-constraint` dans le {validator}."
+
+#. errors.minimum-length-constraint.name
+#: goodtables/spec.json:195
+msgid "Minimum Length Constraint"
+msgstr "Contrainte du nombre minimal de caractères"
+
+#. errors.minimum-length-constraint.message
+#: goodtables/spec.json:199
+msgid ""
+"The value {value} in row {row_number} and column {column_number} does not"
+" conform to the minimum length constraint of {constraint}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} ne correspond pas"
+" à la contrainte du nombre minimal de caractères de {constraint}."
+
+#. errors.minimum-length-constraint.description
+#: goodtables/spec.json:200
+msgid ""
+"A length of this field value should be greater or equal than schema "
+"constraint value.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove or refine the `minimumLength` "
+"constraint in the schema.\n"
+" - If this error should be ignored disable `minimum-length-constraint` "
+"check in {validator}."
+msgstr ""
+"Le nombre de caractères de la valeur de ce champ devrait être supérieur ou égal "
+"à la valeur de la contrainte du schéma.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n" 
+"- Si la valeur est exacte, il faut supprimer ou affiner la contrainte `minimumLength` dans le schéma.\n"
+"- Si l'erreur doit être ignoré, il faut désactiver la vérification `minimum-length-constraint` dans le {validator}."
+
+#. errors.maximum-length-constraint.name
+#: goodtables/spec.json:203
+msgid "Maximum Length Constraint"
+msgstr "Contrainte du nombre maximal de caractères"
+
+#. errors.maximum-length-constraint.message
+#: goodtables/spec.json:207
+msgid ""
+"The value {value} in row {row_number} and column {column_number} does not"
+" conform to the maximum length constraint of {constraint}"
+msgstr ""
+"La valeur {value} dans la ligne {row_number} et la colonne {column_number} ne correspond pas"
+" à la contrainte du nombre maximal de caractères de {constraint}."
+
+#. errors.maximum-length-constraint.description
+#: goodtables/spec.json:208
+msgid ""
+"A length of this field value should be less or equal than schema "
+"constraint value.\n"
+"\n"
+" How it could be resolved:\n"
+" - If this value is not correct, update the value.\n"
+" - If value is correct, then remove or refine the `maximumLength` "
+"constraint in the schema.\n"
+" - If this error should be ignored disable `maximum-length-constraint` "
+"check in {validator}."
+msgstr ""
+"Le nombre de caractères de la valeur de ce champ devrait être inférieur ou égal à la valeur"
+" de la contrainte du schéma.\n"
+"\n"
+"Solution :\n"
+"- Si la valeur est erronée, il faut la mettre à jour.\n" 
+"- Si la valeur est exacte, il faut supprimer ou affiner la contrainte `maximumLength` dans le schéma.\n"
+"- Si l'erreur doit être ignoré, il faut désactiver la vérification `maximum-length-constraint` dans le {validator}."
+
