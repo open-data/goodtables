@@ -16,6 +16,17 @@ import functools
 from .spec import spec
 
 
+def set_language(lang):
+    """Use a different language for errors than the default
+
+    # Raises
+        IOError: translation for lang is not found.
+    """
+    global _
+    _ = gettext.translation('goodtables', i18n_dir, [lang]).ugettext
+
+
+
 @functools.total_ordering
 class Error(object):
     """Describes a validation check error
