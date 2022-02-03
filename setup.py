@@ -23,7 +23,7 @@ NAME = PACKAGE.replace('_', '-')
 INSTALL_REQUIRES = [
     'six>=1.9',
     'click>=6.6',
-    'click-default-group',
+#    'click-default-group',
     'requests>=2.10',
     'simpleeval>=0.9',
     'statistics>=1.0',
