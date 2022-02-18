@@ -66,8 +66,9 @@ class Inspector(object):
         preset_func = self.__get_preset(preset)['func']
         warnings, tables = preset_func(source, **options)
         if len(tables) > self.__table_limit:
+            from .error import _
             warnings.append(
-                'Dataset inspection has reached %s table(s) limit' % (self.__table_limit)
+                _('Dataset inspection has reached %s table(s) limit' % (self.__table_limit))
             )
             tables = tables[: self.__table_limit]
 
@@ -261,15 +262,17 @@ class Inspector(object):
                             break
                         error.row = row
                     if row_number >= self.__row_limit:
+                        from .error import _
                         warnings.append(
-                            'Table "%s" inspection has reached %s row(s) limit'
-                            % (source, self.__row_limit)
+                            _('Table "%s" inspection has reached %s row(s) limit'
+                            % (source, self.__row_limit))
                         )
                         break
                     if len(errors) >= self.__error_limit:
+                        from .error import _
                         warnings.append(
-                            'Table "%s" inspection has reached %s error(s) limit'
-                            % (source, self.__error_limit)
+                            _('Table "%s" inspection has reached %s error(s) limit'
+                            % (source, self.__error_limit))
                         )
                         break
 
