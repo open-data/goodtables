@@ -68,7 +68,8 @@ class Inspector(object):
         if len(tables) > self.__table_limit:
             from .error import _
             warnings.append(
-                _('Dataset inspection has reached %s table(s) limit') % (self.__table_limit)
+                _('Dataset inspection has reached {} table(s) limit').format(
+                    self.__table_limit)
             )
             tables = tables[: self.__table_limit]
 
@@ -264,15 +265,15 @@ class Inspector(object):
                     if row_number >= self.__row_limit:
                         from .error import _
                         warnings.append(
-                            _('Table "%s" inspection has reached %s row(s) limit')
-                            % (source, self.__row_limit)
+                            _('Table "{}" inspection has reached {} row(s) '
+                              'limit').format(source, self.__row_limit)
                         )
                         break
                     if len(errors) >= self.__error_limit:
                         from .error import _
                         warnings.append(
-                            _('Table "%s" inspection has reached %s error(s) limit')
-                            % (source, self.__error_limit)
+                            _('Table "{}" inspection has reached {} error(s) '
+                              'limit').format(source, self.__error_limit)
                         )
                         break
 

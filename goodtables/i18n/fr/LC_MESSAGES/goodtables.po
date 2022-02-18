@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: goodtables 2.5.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-18 09:38-0500\n"
+"POT-Creation-Date: 2022-02-18 17:27-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -18,20 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: goodtables/inspector.py:70
-#, python-format
-msgid "Dataset inspection has reached %s table(s) limit"
-msgstr "FR-Dataset inspection has reached %s table(s) limit"
+#: goodtables/inspector.py:71
+msgid "Dataset inspection has reached {} table(s) limit"
+msgstr "L'inspection du jeu de données a atteint la limite de {} table(s)"
 
-#: goodtables/inspector.py:266
-#, python-format
-msgid "Table \"%s\" inspection has reached %s row(s) limit"
-msgstr "FR-Table \"%s\" inspection has reached %s row(s) limit"
+#: goodtables/inspector.py:268
+msgid "Table \"{}\" inspection has reached {} row(s) limit"
+msgstr "L'inspection de la table \"{}\" a atteint la limite de {} ligne(s)"
 
-#: goodtables/inspector.py:272
-#, python-format
-msgid "Table \"%s\" inspection has reached %s error(s) limit"
-msgstr "FR-Table \"%s\" inspection has reached %s error(s) limit"
+#: goodtables/inspector.py:275
+msgid "Table \"{}\" inspection has reached {} error(s) limit"
+msgstr "L'inspection de la table \"{}\" a atteint la limite d'erreur(s) de {}"
 
 #. errors.io-error.name
 #: goodtables/spec.json:7
