@@ -69,6 +69,7 @@ setup(
     },
     message_extractors={
         'goodtables': [
+            ('**.py', 'python', None),
             ('spec.json', 'goodtables', None),
         ],
     },
