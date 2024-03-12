@@ -2,3 +2,4 @@
 
 pyrsistent==0.16.1
 jsonschema==3.2.0
+tableschema==1.20.2
