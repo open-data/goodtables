@@ -1,32 +1,36 @@
 # Translations template for goodtables.
-# Copyright (C) 2023 ORGANIZATION
+# Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the goodtables project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: goodtables 2.5.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-06-29 20:44+0000\n"
+"POT-Creation-Date: 2024-03-22 16:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.7.0\n"
 
 #: goodtables/inspector.py:71
 msgid "Dataset inspection has reached {} table(s) limit"
 msgstr ""
 
-#: goodtables/inspector.py:268
+#: goodtables/inspector.py:278
 msgid "Table \"{}\" inspection has reached {} row(s) limit"
 msgstr ""
 
-#: goodtables/inspector.py:275
+#: goodtables/inspector.py:285
 msgid "Table \"{}\" inspection has reached {} error(s) limit"
+msgstr ""
+
+#: goodtables/inspector.py:355
+msgid "The data source could not be successfully decoded with utf-8 encoding"
 msgstr ""
 
 #. errors.io-error.name

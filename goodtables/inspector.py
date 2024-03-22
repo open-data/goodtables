@@ -349,9 +349,10 @@ def _compose_error_from_exception(exception):
     elif isinstance(exception, tabulator.exceptions.FormatError):
         code = 'format-error'
     elif isinstance(exception, tabulator.exceptions.EncodingError):
-        # (canada fork only): custom encoding error code and messgae
+        # (canada fork only): custom encoding error code and message
+        from .error import _
         code = 'canada-encoding-error'
-        message = "The data source could not be successfully decoded with utf-8 encoding"
+        message = _("The data source could not be successfully decoded with utf-8 encoding")
     elif isinstance(exception, tabulator.exceptions.IOError):
         code = 'io-error'
     elif isinstance(exception, tabulator.exceptions.HTTPError):
