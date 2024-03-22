@@ -9,7 +9,7 @@ from tableschema import Schema, exceptions
 from ..registry import preset
 
 try:
-    from ckanext.canada.tabulator import CanadaStream as Stream
+    from ckanext.canada.tabulate import CanadaStream as Stream
 except ImportError:
     from tabulator import Stream
 
