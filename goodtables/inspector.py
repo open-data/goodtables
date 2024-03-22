@@ -207,6 +207,16 @@ class Inspector(object):
         if not checks:
             fatal_error = True
 
+        # (canada fork only): adds file checks
+        if not fatal_error:
+            for check in checks:
+                check_func = getattr(check['func'], 'check_file', None)
+                if check_func:
+                    _errors, fatal_error = check_func() or ([], False)
+                    errors += _errors
+                    if fatal_error:
+                        headers = []
+
         # Head checks
         if not fatal_error:
             # Prepare cells
@@ -339,7 +349,9 @@ def _compose_error_from_exception(exception):
     elif isinstance(exception, tabulator.exceptions.FormatError):
         code = 'format-error'
     elif isinstance(exception, tabulator.exceptions.EncodingError):
-        code = 'encoding-error'
+        # (canada fork only): custom encoding error code and messgae
+        code = 'canada-encoding-error'
+        message = "The data source could not be successfully decoded with utf-8 encoding"
     elif isinstance(exception, tabulator.exceptions.IOError):
         code = 'io-error'
     elif isinstance(exception, tabulator.exceptions.HTTPError):
