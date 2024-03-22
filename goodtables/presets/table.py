@@ -5,9 +5,13 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 
 import six
-from tabulator import Stream
 from tableschema import Schema, exceptions
 from ..registry import preset
+
+try:
+    from ckanext.canada.tabulator import CanadaStream as Stream
+except ImportError:
+    from tabulator import Stream
 
 
 # Module API
