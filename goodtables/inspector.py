@@ -212,8 +212,12 @@ class Inspector(object):
             for check in checks:
                 check_func = getattr(check['func'], 'check_file', None)
                 if check_func:
-                    _errors, fatal_error = check_func() or ([], False)
-                    errors += _errors
+                    try:
+                        _errors, fatal_error = check_func() or ([], False)
+                        errors += _errors
+                    except Exception as exception:
+                        error, fatal_error = _compose_error_from_exception(exception)
+                        errors.append(error)
                     if fatal_error:
                         headers = []
 
