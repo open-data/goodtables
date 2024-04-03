@@ -179,6 +179,11 @@ class Inspector(object):
             if schema is None:
                 checks = _filter_checks(checks, type='schema', inverse=True)
         except Exception as exception:
+            # (canada fork only): catch list of errors raise from ckanext.canada.tabulate
+            # because Prepare table callse stream.open(), any exceptions thrown in the
+            # ckanext.canada.tabulate classes should get raised here.
+            # FIXME: any exeption raised in the stream opening will be caught, eaten,
+            #        and sent back here as a stringified SourceError...
             error, fatal_error = _compose_error_from_exception(exception)
             errors.append(error)
 
@@ -206,20 +211,6 @@ class Inspector(object):
                 checks.remove(check)
         if not checks:
             fatal_error = True
-
-        # (canada fork only): adds file checks
-        if not fatal_error:
-            for check in checks:
-                check_func = getattr(check['func'], 'check_file', None)
-                if check_func:
-                    try:
-                        _errors, fatal_error = check_func() or ([], False)
-                        errors += _errors
-                    except Exception as exception:
-                        error, fatal_error = _compose_error_from_exception(exception)
-                        errors.append(error)
-                    if fatal_error:
-                        headers = []
 
         # Head checks
         if not fatal_error:
