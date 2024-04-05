@@ -179,11 +179,6 @@ class Inspector(object):
             if schema is None:
                 checks = _filter_checks(checks, type='schema', inverse=True)
         except Exception as exception:
-            # (canada fork only): catch list of errors raise from ckanext.canada.tabulate
-            # because Prepare table callse stream.open(), any exceptions thrown in the
-            # ckanext.canada.tabulate classes should get raised here.
-            # FIXME: any exeption raised in the stream opening will be caught, eaten,
-            #        and sent back here as a stringified SourceError...
             error, fatal_error = _compose_error_from_exception(exception)
             errors.append(error)
 
@@ -355,6 +350,10 @@ def _compose_error_from_exception(exception):
     elif isinstance(exception, tableschema.exceptions.IntegrityError):
         code = 'source-error'
         fatal_error = False
+    elif isinstance(exception, tabulator.exceptions.TabulatorException) and isinstance(exception.message, tuple):
+        # (canada fork only): custom error handling raised from the canada tabulator stream class
+        code = exception.message[0]
+        message = exception.message[1]
 
     return (Error(code, message=message), fatal_error)
 
